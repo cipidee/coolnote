@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<p th:text="${note}?: '
+Találós kérdés:
+
+Hogyan köszöntsünk fel egy majdnemszülinapos Baglyot?
+a: Füled érjen bokáig!
+b: túró a füledbe
+c: banános torta a képedbe
+d: kabbe :D
+e: fake időpont, nem is holnap lesz
+f: tököm tudja
+'"></p>
+<p>
+    <!--<small th:text="Edited + ${editCount} + times"></small>-->
+    <small th:text="'Edited '+ ${editCount} +' times'"></small>
+</p>
+</body>
+</html>
