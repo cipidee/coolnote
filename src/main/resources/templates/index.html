@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:kérdés="http://www.w3.org/1999/xhtml" xmlns:a="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
-<p th:text="${note}?: '
-Találós kérdés:
-
-Hogyan köszöntsünk fel egy majdnemszülinapos Baglyot?
-a: Füled érjen bokáig!
-b: túró a füledbe
-c: banános torta a képedbe
-d: kabbe :D
-e: fake időpont, nem is holnap lesz
-f: tököm tudja
-'"></p>
+<p th:text="${note}?: 'Találós kérdés:'"></p><br/>
+<p th:text="${note}?: 'Hogyan köszöntsünk fel egy dinka szülinapos Baglyot?'"></p>
+<p th:style="${note}?: 'color:red;'" th:text="${note}?: 'a: Füled érjen bokáig!'"></p>
+<p th:text="${note}?: 'b: túró a füledbe'"></p>
+<p th:text="${note}?: 'c: banános torta a képedbe'"></p>
+<p th:text="${note}?: 'd: kabbe :D'"></p>
+<p th:text="${note}?: 'e: fake időpont, nem is ma van'"></p>
+<p th:text="${note}?: 'f: tököm tudja'"></p>
 <p>
     <!--<small th:text="Edited + ${editCount} + times"></small>-->
     <small th:text="'Edited '+ ${editCount} +' times'"></small>
